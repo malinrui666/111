@@ -1,0 +1,65 @@
+# ice3402p-yr
+
+A lightweight project built for ICE3402P (Data Structures), focused on computing XOR distance — a common metric used in distributed hash tables (DHTs) and related applications.
+
+## Features
+
+* **`xor_distance.py`**
+
+  * Calculates the XOR distance between two inputs
+  * Supports multiple formats (integers, bytes, hex strings)
+  * Useful in contexts like DHT node/key distance comparison
+
+## Project Structure
+
+```
+ice3402p-yr/
+├── xor_distance.py        # Core script for XOR distance computation
+└── (Other files...)       # Additional modules, tests, or examples
+```
+
+* `xor_distance.py`: Main script with input parsing and XOR logic
+* Designed to be modular and easily extended with more data structure utilities (trees, lists, graphs, etc.)
+
+## Demo: How to Run
+
+1. Clone the repository:
+
+   ```bash
+   git clone -b dev https://github.com/JoueYIN/ice3402p-yr.git
+   cd ice3402p-yr
+   ```
+
+2. Run the XOR distance script:
+
+   ```bash
+   python3 xor_distance.py \
+     --input1 0x1A2B3C4D \
+     --input2 0xDEADBEEF
+   ```
+
+   Example output:
+
+   ```
+   XOR distance between 0x1a2b3c4d and 0xdeadbeef is 0xc75382a2 (decimal: 3344566274)
+   ```
+
+3. Argument details:
+
+   * `--input1`, `--input2`: Accept integers or hexadecimal strings (with `0x`)
+   * Extendable to support bytes or raw hex strings if needed
+
+## Possible Extensions
+
+* **Unit testing**: Add pytest-based test cases for the core function
+* **Modularization**: Package the script for import in other Python projects
+* **CLI Improvements**: Include argument validation and help text via `argparse`
+* **Additional Data Structures**: Expand the project to cover trees, linked lists, sorting, and graphs as needed for coursework
+
+---
+
+## Summary
+
+* **Core Functionality**: XOR distance computation for comparing keys or nodes
+* **Simple Structure**: Single Python file, easily readable and modifiable
+* **User-Friendly Demo**: Command-line interface with clear input/output
